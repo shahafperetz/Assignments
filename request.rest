@@ -1,0 +1,43 @@
+@baseUrl = http://localhost:3000
+@postId = 69592f5cf02dc66aa6d290e8
+@commentId = 69593447f02dc66aa6d29102
+
+################################
+# POSTS
+################################
+
+### Create Post
+POST {{baseUrl}}/post
+Content-Type: application/json
+
+{
+  "sender": "shahaf",
+  "content": "my first post"
+}
+
+###
+
+### Get All Posts
+GET {{baseUrl}}/post
+
+###
+
+### Get Posts By Sender
+GET {{baseUrl}}/post?sender=shahaf
+
+###
+
+### Get Post By ID
+GET {{baseUrl}}/post/{{postId}}
+
+###
+
+### Update Post
+PUT {{baseUrl}}/post/{{postId}}
+Content-Type: application/json
+
+{
+  "content": "updated post content"
+}
+
+
