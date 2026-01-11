@@ -41,3 +41,44 @@ Content-Type: application/json
 }
 
 
+
+################################
+# COMMENTS
+################################
+
+### Create Comment
+POST {{baseUrl}}/comment
+Content-Type: application/json
+
+{
+  "postId":"{{postId}}
+  "sender": "tal",
+  "text": "my first comment"
+}
+
+###
+
+### Get All Comments By Post
+GET {{baseUrl}}/comment?postId={{postId}}
+
+###
+
+### Get Comment By Id
+GET {{baseUrl}}/comment/{{commentId}}
+
+###
+
+### Update Comment
+PUT {{baseUrl}}/comment/{{commentId}}
+Content-Type: application/json
+
+{
+  "text": "edited comment"
+}
+
+###
+
+### Delete Comment
+DELETE {{baseUrl}}/comment/{{commentId}}
+
+
